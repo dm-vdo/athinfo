@@ -52,7 +52,7 @@ def main():
             signal.alarm(options.timeout)
 
         s.connect((host_addr, port))
-        s.sendall('%s\n' % query)
+        s.sendall(('%s\n' % query).encode())
         sys.stdout.writelines(s.makefile())
     except socket.error as e:
         print('athinfo: {0}'.format(e.args[-1]), file = sys.stderr)
