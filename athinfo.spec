@@ -24,7 +24,8 @@ either requiring authentication from the client end OR creating security
 holes on the remote host.
 
 %prep
-%setup -n %{name}-%{version}
+#XXX: This should be adjusted when we post publicly.
+%setup -n %{name}-master
 
 %build
 python3 setup.py build
