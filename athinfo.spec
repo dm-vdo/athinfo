@@ -12,7 +12,7 @@ Prefix:    %{_prefix}
 BuildArch: noarch
 Vendor:    Evan Broder <UNKNOWN>
 URL:       https://github.com/mit-athena/athinfo
-Source0:   https://gitlab.cee.redhat.com/vdo/open-sourcing/tools/third/athinfo/-/archive/master/athinfo-master.tar.gz
+Source0:   https://github.com/dm-vdo/athinfo/archive/refs/heads/main.tar.gz
 Summary:   Retrieve information about Athena workstations
 
 BuildRequires: python3
@@ -24,8 +24,7 @@ either requiring authentication from the client end OR creating security
 holes on the remote host.
 
 %prep
-#XXX: This should be adjusted when we post publicly.
-%setup -n %{name}-master
+%setup -n %{name}-main
 
 %build
 python3 setup.py build
