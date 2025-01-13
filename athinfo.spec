@@ -1,7 +1,7 @@
 %define name athinfo
 %define version 10.3
 %define unmangled_version 10.3
-%define release 1
+%define release 2
 
 Name:      %{name}
 Version:   %{version}
@@ -16,6 +16,7 @@ Source0:   https://github.com/dm-vdo/athinfo/archive/refs/heads/main.tar.gz
 Summary:   Retrieve information about Athena workstations
 
 BuildRequires: python3
+BuildRequires: python3-setuptools
 Requires:      python3
 
 %description
@@ -39,5 +40,8 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root)
 
 %changelog
+* Mon Jan 13 2025 Chung Chung <cchung@redhat.com> - 10.3-2
+- Add "BuildRequires python3-setuptools" for more modern python3 versions
+
 * Thu Dec 09 2021 Andy Walsh <awalsh@redhat.com> - 10.3-1
 - Initial build
